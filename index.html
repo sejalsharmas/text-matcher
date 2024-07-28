@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-comparator</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            color: beige;
+            font-size: 50px;
+            text-align: center;
+        }
+        .input-boxes-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .input-boxes {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: chartreuse 0px 5px 15px;
+            background-color: black;
+            color: chartreuse;
+            font-size: 30px;
+            border: 1px solid chartreuse;
+            padding: 10px;
+         
+         }
+        .input-boxes::placeholder {
+            color: chartreuse;
+            text-align: left;
+            vertical-align: top;
+        }
+        .matcher {
+            text-align: center;
+            color: beige;
+            margin-top: 60px;
+            font-size: 30px;
+        }
+        .buttons {
+            background-color: black;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid chartreuse;
+            color: chartreuse;
+            border-radius: 20px;
+            box-shadow: chartreuse 0px 5px 10px;
+            font-size: 20px;
+            letter-spacing: 4px;
+            margin-left: 660px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>TEXT-MATCHER</h1>
+    <div class="input-boxes-container">
+        <input type="text" id="input-box1" class="input-boxes" onkeyup="compareText()" placeholder="enter your text" />
+        <input type="text" id="input-box2" class="input-boxes" onkeyup="compareText()" placeholder="enter your text" />
+    </div>
+    <p class="matcher" id="match-result"></p>
+    <div class="buttons">
+    <button class="" onclick="compareText()">CHECK MATCH</button>
+    <button  onclick="reset()">RESET</button>
+     </div>
+
+    <script>
+        function compareText() {
+            const input1Element = document.getElementById("input-box1");
+            const input2Element = document.getElementById("input-box2");
+            const matchResult = document.getElementById("match-result");
+
+            if (input1Element.value === input2Element.value) {
+                matchResult.innerText = "MATCHED!";
+                matchResult.style.color = "green";
+            } else {
+                matchResult.innerText = "NOT MATCHED!!";
+                matchResult.style.color = "red";
+            }
+        }
+
+        function reset() {
+            const input1Element = document.getElementById("input-box1");
+            input1Element.value = "";
+
+            const input2Element = document.getElementById("input-box2");
+            input2Element.value = "";
+
+            const matchResult = document.getElementById("match-result");
+            matchResult.innerText = "";
+        }
+    </script>
+</body>
+</html>
