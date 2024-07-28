@@ -9,7 +9,7 @@
             background-color: black;
         }
         h1 {
-            color: beige;
+            color: chartreuse;
             font-size: 50px;
             text-align: center;
         }
@@ -29,13 +29,14 @@
             font-size: 30px;
             border: 1px solid chartreuse;
             padding: 10px;
+            vertical-align: text-top;
          
          }
-        .input-boxes::placeholder {
-            color: chartreuse;
-            text-align: left;
+         .input-boxes input ::placeholder{
             vertical-align: top;
-        }
+            margin-bottom:50px ;
+            bottom: 30px;
+         }
         .matcher {
             text-align: center;
             color: beige;
@@ -44,9 +45,7 @@
         }
         .buttons {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 50px;
+           gap: 20px;
            
         }
         .check-btn{
@@ -59,6 +58,7 @@
             box-shadow: chartreuse 0px 5px 10px;
             font-size: 20px;
             letter-spacing: 4px;
+            margin-left: 500px;
         }
         .reset-btn{
             background-color: black;
@@ -78,8 +78,8 @@
 <body>
     <h1>TEXT-MATCHER</h1>
     <div class="input-boxes-container">
-        <input type="text" id="input-box1" class="input-boxes" onkeyup="compareText()" placeholder="enter your text" />
-        <input type="text" id="input-box2" class="input-boxes" onkeyup="compareText()" placeholder="enter your text" />
+        <input type="text" id="input-box1" class="input-boxes" onkeyup="" placeholder="enter your text" />
+        <input type="text" id="input-box2" class="input-boxes" onkeyup="" placeholder="enter your text" />
     </div>
     <p class="matcher" id="match-result"></p>
     <div class="buttons">
