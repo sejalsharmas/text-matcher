@@ -43,6 +43,24 @@
             font-size: 30px;
         }
         .buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+           
+        }
+        .check-btn{
+            background-color: black;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid chartreuse;
+            color: chartreuse;
+            border-radius: 20px;
+            box-shadow: chartreuse 0px 5px 10px;
+            font-size: 20px;
+            letter-spacing: 4px;
+        }
+        .reset-btn{
             background-color: black;
             padding: 10px;
             width: 200px;
@@ -52,7 +70,7 @@
             box-shadow: chartreuse 0px 5px 10px;
             font-size: 20px;
             letter-spacing: 4px;
-            margin-left: 660px;
+          
         }
         
     </style>
@@ -65,8 +83,8 @@
     </div>
     <p class="matcher" id="match-result"></p>
     <div class="buttons">
-    <button class="" onclick="compareText()">CHECK MATCH</button>
-    <button  onclick="reset()">RESET</button>
+    <button class="check-btn" onclick="compareText()">CHECK MATCH</button>
+    <button class="reset-btn" onclick="reset()">RESET</button>
      </div>
 
     <script>
